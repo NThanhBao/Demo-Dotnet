@@ -24,9 +24,10 @@ else if (TempData["ErrorMessage"] != null)
     <thead class="thead-dark">
         <tr>
             <th>Tên sản phẩm</th>
-            <th>Giá</th>
             <th>Mô tả</th>
+            <th>Giá</th>
             <th>Ngày tạo</th>
+            <th>Số lượng</th>
             <th>Hành động</th>
         </tr>
     </thead>
@@ -35,9 +36,10 @@ else if (TempData["ErrorMessage"] != null)
         {
             <tr>
                 <td>@product.Name</td>
-                <td>@String.Format("{0:C}", product.Price)</td>
                 <td>@product.Description</td>
+                <td>@String.Format("{0:C}", product.Price)</td>
                 <td>@product.CreatedAt.ToString("dd/MM/yyyy")</td>
+                <td>@product.Quantity</td>
                 <td>
                     <a href="@Url.Action("Edit", "Product", new { id = product.Id })" class="btn btn-warning btn-sm">Sửa</a>
                     <a href="@Url.Action("Delete", "Product", new { id = product.Id })" class="btn btn-danger btn-sm">Xóa</a>
