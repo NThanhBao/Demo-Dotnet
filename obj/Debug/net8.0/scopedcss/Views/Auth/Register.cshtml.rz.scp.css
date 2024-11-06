@@ -1,0 +1,24 @@
+.form-container[b-d06s423iws] {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #eef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form-footer[b-d06s423iws] {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h3[b-d06s423iws] {
+    text-align: center;
+}
+
+button[b-d06s423iws] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}

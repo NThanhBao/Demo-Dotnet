@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Hãy bắt đầu với ứng dụng của bạn!</p>
+
+    @* Hiển thị thông báo đăng nhập thành công *@
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @* Kiểm tra xem người dùng đã đăng nhập chưa *@
+    @if (Context.Session.GetString("Username") != null)
+    {
+        <p>Chào mừng bạn, @Context.Session.GetString("Username")!</p>
+        <a class="btn btn-danger" href="/Auth/Logout">Đăng Xuất</a>
+        
+        @* Thêm nút "Xem Sản Phẩm" ở đây *@
+        <a class="btn btn-secondary" href="/Product/Index">Xem Sản Phẩm</a>
+    }
+    else
+    {
+        <div>
+            <a class="btn btn-primary" href="/Auth/Login">Đăng Nhập</a>
+            <a class="btn btn-secondary" href="/Auth/Register">Đăng Ký</a>
+        </div>
+    }
+</div>

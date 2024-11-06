@@ -1,0 +1,99 @@
+/* _content/UserAuthApp_MVC/Views/Auth/Login.cshtml.rz.scp.css */
+.form-container[b-tg254ihx73] {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-footer[b-tg254ihx73] {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h3[b-tg254ihx73] {
+    text-align: center;
+}
+
+button[b-tg254ihx73] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+/* _content/UserAuthApp_MVC/Views/Auth/Register.cshtml.rz.scp.css */
+.form-container[b-d06s423iws] {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #eef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form-footer[b-d06s423iws] {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h3[b-d06s423iws] {
+    text-align: center;
+}
+
+button[b-d06s423iws] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+/* _content/UserAuthApp_MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-o6y2kbvvvy] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-o6y2kbvvvy] {
+  color: #0077cc;
+}
+
+.btn-primary[b-o6y2kbvvvy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-o6y2kbvvvy], .nav-pills .show > .nav-link[b-o6y2kbvvvy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-o6y2kbvvvy] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-o6y2kbvvvy] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-o6y2kbvvvy] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-o6y2kbvvvy] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-o6y2kbvvvy] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
