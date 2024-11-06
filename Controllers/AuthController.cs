@@ -44,6 +44,20 @@ namespace UserAuthApp_MVC.Controllers
         }
 
 
+        // GET: /Auth/Logout
+        public IActionResult Logout()
+        {
+            // Xóa thông tin người dùng khỏi session
+            HttpContext.Session.Remove("Username");
+            HttpContext.Session.Remove("UserRole");
+
+            // Hiển thị thông báo
+            TempData["SuccessMessage"] = "Đăng xuất thành công!";
+
+            // Chuyển hướng về trang chủ hoặc trang đăng nhập
+            return RedirectToAction("Index", "Home");
+        }
+
 
         // GET: /Auth/Register
         public IActionResult Register()
