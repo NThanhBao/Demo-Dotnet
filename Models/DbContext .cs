@@ -18,8 +18,8 @@ namespace UserAuthApp_MVC.Models
             modelBuilder.Entity<User>()
                 .Property(u => u.Role)
                 .HasConversion(
-                    v => v.ToString(), // Chuyển enum thành chuỗi trước khi lưu vào cơ sở dữ liệu
-                    v => (UserRole)Enum.Parse(typeof(UserRole), v)); // Chuyển chuỗi thành enum khi truy xuất
+                    v => v.ToString(), 
+                    v => (UserRole)Enum.Parse(typeof(UserRole), v));
         }
     }
 }

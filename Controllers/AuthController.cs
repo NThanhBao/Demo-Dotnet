@@ -20,7 +20,6 @@ namespace UserAuthApp_MVC.Controllers
             return View();
         }
 
-
         // POST: /Auth/Login
         [HttpPost]
         public IActionResult Login(string username, string password)
@@ -33,13 +32,11 @@ namespace UserAuthApp_MVC.Controllers
                 HttpContext.Session.SetString("UserRole", user.Role.ToString());
 
                 TempData["SuccessMessage"] = "Đăng nhập thành công!";
-                Console.WriteLine("Đăng nhập thành công.");
 
                 return RedirectToAction("Index", "Home");
             }
 
             ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không chính xác.");
-            Console.WriteLine("Tên người dùng hoặc mật khẩu không chính xác.");
             return View();
         }
 
@@ -51,10 +48,8 @@ namespace UserAuthApp_MVC.Controllers
             HttpContext.Session.Remove("Username");
             HttpContext.Session.Remove("UserRole");
 
-            // Hiển thị thông báo
             TempData["SuccessMessage"] = "Đăng xuất thành công!";
 
-            // Chuyển hướng về trang chủ hoặc trang đăng nhập
             return RedirectToAction("Index", "Home");
         }
 

@@ -45,7 +45,6 @@ namespace UserAuthApp_MVC.Controllers
         {
             var userRole = HttpContext.Session.GetString("UserRole");
 
-            // Kiểm tra nếu người dùng có vai trò ADMIN
             if (userRole == "ADMIN")
             {
                 var product = _context.Products.Find(id);
@@ -69,7 +68,6 @@ namespace UserAuthApp_MVC.Controllers
         {
             var userRole = HttpContext.Session.GetString("UserRole");
 
-            // Kiểm tra nếu người dùng có vai trò ADMIN
             if (userRole == "ADMIN")
             {
                 if (ModelState.IsValid)
@@ -93,7 +91,6 @@ namespace UserAuthApp_MVC.Controllers
         {
             var userRole = HttpContext.Session.GetString("UserRole");
 
-            // Kiểm tra nếu người dùng có vai trò ADMIN
             if (userRole == "ADMIN")
             {
                 var product = _context.Products.Find(id);
@@ -118,7 +115,6 @@ namespace UserAuthApp_MVC.Controllers
         {
             var userRole = HttpContext.Session.GetString("UserRole");
 
-            // Kiểm tra nếu người dùng có vai trò ADMIN
             if (userRole == "ADMIN")
             {
                 var product = _context.Products.Find(id);

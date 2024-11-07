@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="username">Tên người dùng:</label>
             <input type="text" id="username" name="Username" class="form-control" required />
-            @* Hiển thị thông báo lỗi nếu có *@
+            
             @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">

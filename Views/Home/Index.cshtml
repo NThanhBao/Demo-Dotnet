@@ -6,7 +6,6 @@
     <h1 class="display-4">Welcome</h1>
     <p>Hãy bắt đầu với ứng dụng của bạn!</p>
 
-    @* Hiển thị thông báo đăng nhập thành công *@
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="alert alert-success">
@@ -14,13 +13,11 @@
         </div>
     }
 
-    @* Kiểm tra xem người dùng đã đăng nhập chưa *@
     @if (Context.Session.GetString("Username") != null)
     {
         <p>Chào mừng bạn, @Context.Session.GetString("Username")!</p>
         <a class="btn btn-danger" href="@Url.Action("Logout", "Auth")">Đăng Xuất</a>
         
-        @* Thêm nút "Xem Sản Phẩm" ở đây *@
         <a class="btn btn-secondary" href="/Product/Index">Xem Sản Phẩm</a>
     }
     else

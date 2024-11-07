@@ -3,12 +3,20 @@ using UserAuthApp_MVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Thêm dịch vụ DbContext và kết nối với cơ sở dữ liệu
+// Thêm DbContext và kết nối với cơ sở dữ liệu
 builder.Services.AddDbContext<UserAuthDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     new MySqlServerVersion(new Version(8, 0, 21))));
 
-// Thêm dịch vụ điều khiển và trang
+// Thêm Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Thêm điều khiển và trang
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -22,7 +30,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseSession();
 app.UseRouting();
+
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

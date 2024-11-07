@@ -111,3 +111,4 @@ E:\NTB Source Code\Dotnet\UserAuthApp_MVC\bin\Debug\net8.0\zh-Hant\Microsoft.Cod
 E:\NTB Source Code\Dotnet\UserAuthApp_MVC\obj\Debug\net8.0\UserAuthApp_MVC.csproj.AssemblyReference.cache
 E:\NTB Source Code\Dotnet\UserAuthApp_MVC\obj\Debug\net8.0\UserAuth.B76EC8F5.Up2Date
 E:\NTB Source Code\Dotnet\UserAuthApp_MVC\bin\Debug\net8.0\BCrypt.Net-Next.dll
+E:\NTB Source Code\Dotnet\UserAuthApp_MVC\obj\Debug\net8.0\UserAuthApp_MVC.sourcelink.json
